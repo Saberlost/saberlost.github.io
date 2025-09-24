@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Massage Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Toggle button for mobile -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
+    <!-- Side Menu -->
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <h2>Thai Massage</h2>
+        </div>
+        <ul class="menu-items">
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#thai-mix" onclick="showSection('thai-mix')">Thai Mix Massage</a></li>
+            <li><a href="#thai-classic" onclick="showSection('thai-classic')">Thai Classic Massage</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <h1>Welcome to Thai Massage Services</h1>
+            <div class="hero-content">
+                <p>Experience the ancient art of Thai massage in a serene and peaceful environment. Our skilled therapists provide authentic Thai massage techniques that have been passed down through generations.</p>
+                <div class="benefits">
+                    <h3>Benefits of Thai Massage:</h3>
+                    <ul>
+                        <li>Improves flexibility and range of motion</li>
+                        <li>Reduces muscle tension and stress</li>
+                        <li>Enhances energy flow and circulation</li>
+                        <li>Promotes deep relaxation and mental clarity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thai Mix Massage Section -->
+        <section id="thai-mix" class="content-section">
+            <h1>Thai Mix Massage</h1>
+            <div class="service-content">
+                <div class="service-description">
+                    <p>Our Thai Mix Massage combines traditional Thai massage techniques with modern therapeutic approaches. This unique blend offers the best of both worlds, providing deep relaxation while addressing specific muscle tension and stress points.</p>
+                    
+                    <h3>What to Expect:</h3>
+                    <ul>
+                        <li>Traditional Thai stretching and pressure point work</li>
+                        <li>Swedish massage techniques for muscle relaxation</li>
+                        <li>Aromatherapy oils for enhanced relaxation</li>
+                        <li>Customized pressure based on your preferences</li>
+                    </ul>
+
+                    <div class="service-details">
+                        <h3>Session Options:</h3>
+                        <div class="pricing">
+                            <div class="price-item">
+                                <span class="duration">60 minutes</span>
+                                <span class="description">Perfect for first-time clients</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="duration">90 minutes</span>
+                                <span class="description">Full body relaxation experience</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="duration">120 minutes</span>
+                                <span class="description">Ultimate therapeutic session</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thai Classic Massage Section -->
+        <section id="thai-classic" class="content-section">
+            <h1>Thai Classic Massage</h1>
+            <div class="service-content">
+                <div class="service-description">
+                    <p>Experience the authentic Thai Classic Massage, a traditional healing practice that has been refined over centuries. This ancient technique combines acupressure, stretching, and energy work to restore balance and harmony to your body and mind.</p>
+                    
+                    <h3>Traditional Techniques:</h3>
+                    <ul>
+                        <li>Sen line energy work along the body's meridians</li>
+                        <li>Passive yoga-like stretching movements</li>
+                        <li>Pressure point massage using palms, thumbs, and elbows</li>
+                        <li>Joint mobilization and flexibility enhancement</li>
+                    </ul>
+
+                    <div class="service-details">
+                        <h3>What Makes It Special:</h3>
+                        <div class="special-features">
+                            <div class="feature">
+                                <h4>No Oils Used</h4>
+                                <p>Traditional Thai massage is performed fully clothed without oils, allowing for dynamic stretching movements.</p>
+                            </div>
+                            <div class="feature">
+                                <h4>Energy Balancing</h4>
+                                <p>Focus on balancing the body's energy systems through targeted pressure and movement.</p>
+                            </div>
+                            <div class="feature">
+                                <h4>Holistic Approach</h4>
+                                <p>Treats the whole person, addressing physical, mental, and spiritual well-being.</p>
+                            </div>
+                        </div>
+
+                        <div class="session-info">
+                            <h3>Session Information:</h3>
+                            <p><strong>Duration:</strong> 90-120 minutes recommended for full benefits</p>
+                            <p><strong>Preparation:</strong> Wear comfortable, loose-fitting clothing</p>
+                            <p><strong>Best For:</strong> Those seeking deep relaxation and increased flexibility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h1>Contact Us</h1>
+            <div class="contact-content">
+                <p>Ready to experience the healing benefits of Thai massage? Contact us to schedule your appointment.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Hours</h3>
+                        <p>Monday - Saturday: 9:00 AM - 9:00 PM</p>
+                        <p>Sunday: 10:00 AM - 7:00 PM</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>Visit us for a consultation to determine the best massage therapy for your needs.</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Booking</h3>
+                        <p>Call or visit to schedule your Thai massage experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('active');
+        }
+
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+
+            // Close menu on mobile after selection
+            const menu = document.getElementById('sideMenu');
+            menu.classList.remove('active');
+
+            // Update active menu item
+            const menuItems = document.querySelectorAll('.menu-items a');
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            const activeMenuItem = document.querySelector(`a[href="#${sectionId}"]`);
+            if (activeMenuItem) {
+                activeMenuItem.classList.add('active');
+            }
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('sideMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
