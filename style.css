@@ -238,6 +238,140 @@ body {
     color: #666;
 }
 
+/* Gallery Section */
+.gallery {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2d5016;
+    margin-bottom: 1rem;
+}
+
+.gallery-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(45, 80, 22, 0.9), transparent);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Personal Section */
+.personal {
+    background: white;
+    padding: 80px 0;
+}
+
+.personal h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2d5016;
+    margin-bottom: 1rem;
+}
+
+.personal-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.personal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personal-item {
+    text-align: center;
+}
+
+.personal-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    border: 5px solid #f4e4bc;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.personal-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.personal-info h3 {
+    color: #2d5016;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.personal-info p {
+    color: #666;
+    font-size: 1rem;
+}
+
 /* Contact Section */
 .contact {
     background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
@@ -368,6 +502,8 @@ body {
     
     .services h2,
     .about h2,
+    .gallery h2,
+    .personal h2,
     .contact h2 {
         font-size: 2rem;
     }
@@ -399,6 +535,19 @@ body {
     
     .about-features {
         grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .personal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .personal-item img {
+        width: 200px;
+        height: 200px;
     }
     
     .contact-info {
