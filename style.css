@@ -308,6 +308,15 @@ body {
     font-weight: 600;
 }
 
+.gallery-item.portrait {
+    aspect-ratio: 3/4;
+}
+
+.gallery-item.portrait img {
+    object-fit: contain;
+    background: #f8f9fa;
+}
+
 /* Personal Section */
 .personal {
     background: white;
