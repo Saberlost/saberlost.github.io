@@ -1,0 +1,291 @@
+/* Poster Styles - A4 Landscape Format */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* A4 Landscape dimensions: 297mm x 210mm (11.69in x 8.27in) */
+.poster {
+    width: 297mm;
+    height: 210mm;
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background pattern */
+.poster::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(244, 228, 188, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.poster::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(244, 228, 188, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* Header Section */
+.poster-header {
+    text-align: center;
+    padding: 25px 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 3px solid #f4e4bc;
+    position: relative;
+    z-index: 1;
+}
+
+.poster-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #f4e4bc;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+.poster-header .subtitle {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Content Section */
+.poster-content {
+    display: flex;
+    flex: 1;
+    padding: 30px 40px;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.poster-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.poster-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #f4e4bc;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    object-fit: cover;
+    background: white;
+}
+
+/* Services Section */
+.services-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.services-section h2 {
+    color: #2d5016;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    color: #333;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 500;
+}
+
+.services-list li:last-child {
+    border-bottom: none;
+}
+
+.services-list li::before {
+    content: '✓ ';
+    color: #4a7c59;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Contact Section */
+.contact-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    flex: 1;
+}
+
+.contact-item {
+    margin-bottom: 18px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item h3 {
+    color: #2d5016;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.contact-item .hours {
+    font-size: 0.95rem;
+}
+
+/* QR Code Section */
+.qr-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.qr-section h3 {
+    color: #2d5016;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.qr-code {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 10px;
+    display: block;
+    border: 3px solid #f4e4bc;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+}
+
+.qr-section .website {
+    color: #2d5016;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* Footer Section */
+.poster-footer {
+    text-align: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #f4e4bc;
+    position: relative;
+    z-index: 1;
+}
+
+.poster-footer p {
+    color: #f4e4bc;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .poster {
+        box-shadow: none;
+        width: 297mm;
+        height: 210mm;
+    }
+    
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+}
+
+/* Responsive adjustments for screen preview */
+@media screen and (max-width: 1400px) {
+    .poster {
+        width: 100%;
+        max-width: 1122px;
+        height: auto;
+        aspect-ratio: 297 / 210;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .poster-content {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .poster-header h1 {
+        font-size: 2rem;
+    }
+    
+    .poster-header .subtitle {
+        font-size: 1rem;
+    }
+}
