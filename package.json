@@ -1,0 +1,23 @@
+{
+  "name": "saberlost.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Willawan Thaimassage – statisk webbplats (GitHub Pages)",
+  "scripts": {
+    "start": "serve . -l 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saberlost/saberlost.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saberlost/saberlost.github.io/issues"
+  },
+  "homepage": "https://www.willawanthaimassage.se",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
