@@ -1,0 +1,16 @@
+---
+description: Willawan Thaimassage static site — stack, language, and edit boundaries
+alwaysApply: true
+---
+
+# Willawan site conventions
+
+Read `AGENTS.md` for full project context. Follow these constraints on every change:
+
+- Static GitHub Pages site only: edit `index.html`, `style.css`, and assets. No framework/build step unless explicitly requested.
+- User-facing copy stays **Swedish**. Prefer answering the maintainer in Swedish.
+- Do not remove or casually rename `CNAME` (`www.willawanthaimassage.se`).
+- Keep Bokadirekt booking URL identical across all CTAs; use `target="_blank"` + `rel="noopener noreferrer"` on external links.
+- New sections need matching `id`, header nav link, and footer link.
+- Do not change address, phone, prices, or opening hours without business confirmation.
+- Prefer small, matching HTML/CSS fixes over redesigns.
